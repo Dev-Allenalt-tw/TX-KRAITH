@@ -1,0 +1,18 @@
+<section id="guild-roster">
+    <h2>— THE KRAITH SQUAD —</h2>
+    <div 
+        id="member-list"
+        data-sheetdb-url="YOUR_SHEETDB_API_URL"
+        data-sheetdb-sort-by="KD_Ratio"
+        data-sheetdb-sort-order="desc">
+        
+        <div class="member-card">
+            <img src="{{Image_URL}}" alt="{{Name}}">
+            <h3>{{Name}} <span class="member-rank">[{{Rank}}]</span></h3>
+            <p>Role: **{{Role}}**</p>
+            <p>K/D: **{{KD_Ratio}}**</p>
+            <p>Status: **{{Status}}**</p>
+        </div>
+        </div>
+</section>
+<script src="https://sheetdb.io/handlebars.js"></script>
