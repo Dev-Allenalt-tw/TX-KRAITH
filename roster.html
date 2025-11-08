@@ -1,18 +1,74 @@
-<section id="guild-roster">
-    <h2>— THE KRAITH SQUAD —</h2>
-    <div 
-        id="member-list"
-        data-sheetdb-url="YOUR_SHEETDB_API_URL"
-        data-sheetdb-sort-by="KD_Ratio"
-        data-sheetdb-sort-order="desc">
-        
-        <div class="member-card">
-            <img src="{{Image_URL}}" alt="{{Name}}">
-            <h3>{{Name}} <span class="member-rank">[{{Rank}}]</span></h3>
-            <p>Role: **{{Role}}**</p>
-            <p>K/D: **{{KD_Ratio}}**</p>
-            <p>Status: **{{Status}}**</p>
-        </div>
-        </div>
-</section>
-<script src="https://sheetdb.io/handlebars.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TX KRAITH | Roster</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .roster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px 5%;
+        }
+
+        .member-card {
+            background-color: #1a1a1f; /* Dark card background */
+            padding: 25px;
+            text-align: center;
+            border: 2px solid var(--krait-blue);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.4); /* Intense blue outer glow */
+            transition: transform 0.3s ease;
+        }
+
+        .member-card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 0 25px var(--krait-blue);
+        }
+
+        .member-card h3 {
+            color: var(--fire-orange); /* IGN in orange */
+            font-size: 1.8em;
+            margin-top: 10px;
+        }
+
+        .member-card p {
+            margin: 5px 0;
+            color: var(--text-light);
+        }
+
+        .member-card .stat {
+            font-weight: bold;
+            color: var(--krait-blue);
+        }
+    </style>
+</head>
+<body>
+    <header class="navbar">...</header>
+
+    <main class="info-section">
+        <h2>— TX KRAITH SQUAD LIST —</h2>
+        <div 
+            class="roster-grid"
+            data-sheetdb-url="YOUR_SHEETDB_API_URL" 
+            data-sheetdb-sort-by="KD_Ratio" 
+            data-sheetdb-sort-order="desc" 
+            id="roster-list">
+            
+            <div class="member-card">
+                <h3>{{Name}}</h3>
+                <p>Role: <span class="stat">{{Role}}</span></p>
+                <p>Current Rank: <span class="stat">{{Rank}}</span></p>
+                <p>Lifetime K/D: <span class="stat">{{KD_Ratio}}</span></p>
+                <p>Status: {{Status}}</p>
+            </div>
+            </div>
+    </main>
+
+    <script src="https://sheetdb.io/handlebars.js"></script> 
+    <footer>...</footer>
+</body>
+</html>
