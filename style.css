@@ -135,3 +135,97 @@ h1, h2 {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(255, 102, 0, 0.2); /* Subtle orange tint for depth */
 }
+/* --- AUTH PAGE STYLING --- */
+
+.auth-container {
+    display: flex;
+    max-width: 900px;
+    margin: 10vh auto; /* Center the box */
+    border-radius: 15px; /* Rounded corners for the container */
+    overflow: hidden; /* Important for clean edges */
+    box-shadow: 0 10px 40px rgba(0, 255, 255, 0.5); /* Blue glow around the whole box */
+}
+
+.auth-panel {
+    padding: 50px;
+    flex: 1;
+}
+
+/* Panel with the Krait Blue Accent */
+.accent-panel {
+    background-color: var(--krait-blue); /* Electric Blue Accent */
+    color: var(--bg-dark); /* Dark text on bright background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+/* Semi-Circle shape imitation (optional, based on your image) */
+.accent-panel::before {
+    content: '';
+    position: absolute;
+    /* This creates a subtle curve effect for the "attractive" look */
+    /* Requires more complex CSS for perfect semi-circle but this is a simple start */
+}
+
+.accent-panel h2 {
+    color: var(--bg-dark);
+    text-shadow: none; /* Turn off neon glow for dark text on bright background */
+    margin-bottom: 20px;
+}
+
+/* Panel with the Form */
+.form-panel {
+    background-color: #1a1a1f; /* Slightly lighter than the body BG */
+    color: var(--text-light);
+}
+
+.form-panel h3 {
+    color: var(--krait-blue); /* Blue glow for heading */
+    margin-bottom: 30px;
+}
+
+/* Input Styling */
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px 45px 15px 15px;
+    background-color: #333338; /* Darker input field */
+    border: 1px solid var(--text-muted);
+    color: var(--text-light);
+    border-radius: 8px; /* Rounded input fields */
+}
+
+.input-group .icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+}
+
+/* Button Styling (Reusing existing .btn, .primary-cta) */
+.secondary-cta {
+    /* Used for the button inside the accent panel (e.g., Register on the Login page) */
+    background: none;
+    border: 2px solid var(--bg-dark);
+    color: var(--bg-dark);
+    padding: 10px 30px;
+}
+
+.secondary-cta:hover {
+    color: var(--bg-dark);
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-icons {
+    margin-top: 15px;
+    /* Style icons here using the Krait Blue/Orange */
+}
