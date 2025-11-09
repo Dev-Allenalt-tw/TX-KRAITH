@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* Sets the deadly-themed black background */
+    @apply bg-tk-black text-white font-sans;
+  }
+}
